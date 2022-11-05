@@ -1,3 +1,4 @@
+import 'package:aimby/splash/splash.view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,8 +12,10 @@ class Aimby extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: 'Aimby',
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
     );
   }
 }

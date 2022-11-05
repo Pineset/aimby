@@ -15,6 +15,9 @@ class DesignText extends StatelessWidget {
 
   final int? maxLines;
 
+  /// Optional color to be provided for the text
+  final Color? color;
+
   ///
   /// A Text widget to be used according to the design system's text styles
   ///
@@ -24,6 +27,7 @@ class DesignText extends StatelessWidget {
     required this.textStyle,
     this.textAlign,
     this.maxLines,
+    this.color,
   }) : super(key: key);
 
   DesignText.h1(
@@ -31,6 +35,7 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
+    this.color,
   })  : textStyle = DesignTextStyles.headingOne(),
         super(key: key);
 
@@ -39,6 +44,7 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
+    this.color,
   })  : textStyle = DesignTextStyles.headingTwo(),
         super(key: key);
 
@@ -47,6 +53,7 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
+    this.color,
   })  : textStyle = DesignTextStyles.headingThree(),
         super(key: key);
 
@@ -55,7 +62,8 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
-  })  : textStyle = DesignTextStyles.bText(),
+    this.color,
+  })  : textStyle = DesignTextStyles.bText(color: color),
         super(key: key);
 
   DesignText.body1(
@@ -63,6 +71,7 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
+    this.color,
   })  : textStyle = DesignTextStyles.bodyOne(),
         super(key: key);
 
@@ -71,6 +80,7 @@ class DesignText extends StatelessWidget {
     Key? key,
     this.textAlign,
     this.maxLines,
+    this.color,
   })  : textStyle = DesignTextStyles.bodyTwo(),
         super(key: key);
 

@@ -48,8 +48,9 @@ class DesignTextStyles {
         size: 24,
       );
 
-  static TextStyle bText() => _DesignFonts.kalam(
-        color: DesignColors.black,
+  static TextStyle bText({Color? color}) =>
+      _DesignFonts.kalam(
+        color: color ?? DesignColors.white,
         fontWeight: FontWeight.w700,
         size: 20,
       );
